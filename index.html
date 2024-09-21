@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Navbar Example</title>
+    <style>
+        .content {
+            display: none; /* Hide all content by default */
+        }
+        .active {
+            display: block; /* Show active content */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="showSection('profile')">Profile</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('projects')">Projects</button>
+</nav>
+
+<div id="profile" class="content active">
+    <h2>Profile Section</h2>
+    <p>This is the profile content.</p>
+</div>
+
+<div id="education" class="content">
+    <h2>Education Section</h2>
+    <p>This is the education content.</p>
+</div>
+
+<div id="projects" class="content">
+    <h2>Projects Section</h2>
+    <p>This is the projects content.</p>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all content
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Show the selected section
+        const activeContent = document.getElementById(sectionId);
+        if (activeContent) {
+            activeContent.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
