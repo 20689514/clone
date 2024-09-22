@@ -1,0 +1,39 @@
+*{
+}
+
+    .vh-80{
+        height: 80vh !important;
+    }
+
+/* For Dynamic Content Switching */
+    .content {
+        display: none; /* Hide all content by default */
+    }
+    .active {
+        display: block; /* Show active content */
+    }
+   
+
+
+/* For Hover */
+.navv{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    margin: 0px !important;
+}
+
+.navv:hover{
+    background-color: #3498db; /* New background color on hover */
+    border-radius: 8px; 
+}
+
+a{
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    transform: scale(1.1);
+}
+
+
