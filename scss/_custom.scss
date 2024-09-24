@@ -1,0 +1,46 @@
+
+// Custom Color utilities
+$primary: #ff3c00; 
+$secondary: #1a476e; 
+$success: #28a745; 
+$info: #17a2b8; 
+$warning: #ffc107; 
+$danger: #dc3545; 
+$light: #f8f9fa; 
+$dark: #343a40; 
+
+
+
+
+// Custom height utilities
+$height-utilities: (
+  15: 15%,
+);
+
+    // Generate height utility classes
+    @each $value, $height in $height-utilities {
+    .h-#{$value} {
+      height: $height !important;
+    }
+  }
+
+
+
+ 
+// Custom width utilities
+$width-utilities: (
+    15: 15%,
+  );
+  
+      // Generate width utility classes
+      @each $value, $width in $width-utilities {
+      .w-#{$value} {
+        width: $width !important;
+      }
+    }
+  
+
+
+
+
+
